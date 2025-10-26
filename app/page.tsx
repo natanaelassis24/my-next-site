@@ -10,7 +10,14 @@ export default function Home() {
     <div>
       {/* Banner */}
       <section className="banner">
-        <Image src="/images/banner.jpg" alt="Banner" fill style={{ objectFit: 'cover' }} />
+        <Image
+          src="/images/banner.jpg"
+          alt="Banner"
+          width={1920}   // ajuste conforme a proporção da sua imagem
+          height={600}   // ajuste conforme a proporção da sua imagem
+          style={{ width: '100%', height: 'auto' }}
+          priority
+        />
       </section>
 
       {/* Sobre mim */}
@@ -31,7 +38,13 @@ export default function Home() {
         <div className="projects-container">
           {projects.map((project) => (
             <div key={project.id} className="project-card">
-              <Image src={project.image} alt={project.title} width={300} height={200} />
+              <Image
+                src={project.image}
+                alt={project.title}
+                width={300}
+                height={200}
+                style={{ width: '100%', height: 'auto', borderRadius: '10px' }}
+              />
               <h3>{project.title}</h3>
               <p>{project.description}</p>
             </div>
