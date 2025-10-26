@@ -1,8 +1,20 @@
 import Image from 'next/image';
 
 const projects = [
-  { id: 1, title: 'Projeto 1', description: 'Descrição do projeto 1', image: '/images/projeto1.png' },
-  { id: 2, title: 'Projeto 2', description: 'Descrição do projeto 2', image: '/images/projeto2.png' },
+  {
+    id: 1,
+    title: 'Aluguel Manager Web',
+    description: 'Sistema de gerenciamento de aluguel de imóveis.',
+    image: '/images/aluguel-manager.png',
+    link: 'https://github.com/natanaelassis24/aluguel-manager-web',
+  },
+  {
+    id: 2,
+    title: 'PetStyle',
+    description: 'Sistema relacionado a cuidados e serviços para pets.',
+    image: '/images/petstyle.png',
+    link: 'https://github.com/natanaelassis24/FullStack-studies/tree/main/Frontend/activity/activity_0.11',
+  },
 ];
 
 export default function Home() {
@@ -13,8 +25,8 @@ export default function Home() {
         <Image
           src="/images/banner.jpg"
           alt="Banner"
-          width={1920}   // ajuste conforme a proporção da sua imagem
-          height={600}   // ajuste conforme a proporção da sua imagem
+          width={1920}
+          height={600}
           style={{ width: '100%', height: 'auto' }}
           priority
         />
@@ -38,13 +50,15 @@ export default function Home() {
         <div className="projects-container">
           {projects.map((project) => (
             <div key={project.id} className="project-card">
-              <Image
-                src={project.image}
-                alt={project.title}
-                width={300}
-                height={200}
-                style={{ width: '100%', height: 'auto', borderRadius: '10px' }}
-              />
+              <a href={project.link} target="_blank" rel="noopener noreferrer">
+                <Image
+                  src={project.image}
+                  alt={project.title}
+                  width={300}
+                  height={200}
+                  style={{ width: '100%', height: 'auto', borderRadius: '10px' }}
+                />
+              </a>
               <h3>{project.title}</h3>
               <p>{project.description}</p>
             </div>
