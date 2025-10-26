@@ -23,15 +23,6 @@ export default function Home() {
             objetivo é criar produtos digitais que unam funcionalidade e design de alta qualidade.
           </p>
         </div>
-        <div className="about-image">
-          <Image
-            src="/images/foto-perfil.png"
-            alt="Natanael"
-            width={250}
-            height={250}
-            style={{ borderRadius: '50%' }}
-          />
-        </div>
       </section>
 
       {/* Projetos em destaque */}
