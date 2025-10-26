@@ -30,13 +30,15 @@ nav {
   align-items: center;
   background-color: #1a1a1a; /* fundo escuro */
   padding: 15px 30px;
-  flex-wrap: wrap; /* permite quebra de linha em telas pequenas */
+  overflow-x: auto; /* rolagem horizontal se necessário */
+  white-space: nowrap; /* mantém links na mesma linha */
 }
 
 nav a {
   color: #f5f5f5;
   margin-right: 20px;
   font-weight: 500;
+  flex-shrink: 0; /* impede que os links encolham demais */
 }
 
 nav a:last-child {
@@ -73,12 +75,12 @@ main {
 /* Sobre mim */
 .about {
   display: flex;
-  flex-direction: column; /* apenas texto */
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 60px 20px;
   gap: 20px;
-  background: linear-gradient(135deg, #2a0f0f, #10122a); /* degradê vermelho escuro -> azul escuro */
+  background: linear-gradient(135deg, #2a0f0f, #10122a);
   border-radius: 10px;
   margin: 40px 0;
   text-align: center;
@@ -87,20 +89,20 @@ main {
 .about-content h2 {
   font-size: 2rem;
   margin-bottom: 20px;
-  color: #ff4c4c; /* título em vermelho */
+  color: #ff4c4c;
 }
 
 .about-content p {
   font-size: 1.1rem;
   line-height: 1.8;
-  color: #ddd; /* texto claro */
+  color: #ddd;
 }
 
 /* Projetos em destaque */
 .featured-projects {
   padding: 60px 20px;
   text-align: center;
-  background-color: #10122a; /* azul escuro */
+  background-color: #10122a;
 }
 
 .featured-projects h2 {
@@ -117,7 +119,7 @@ main {
 }
 
 .project-card {
-  background: #1a1a2e; /* fundo escuro */
+  background: #1a1a2e;
   border-radius: 10px;
   padding: 20px;
   width: 300px;
@@ -152,17 +154,16 @@ main {
 /* Responsividade */
 @media (max-width: 768px) {
   nav {
-    flex-direction: column;
-    align-items: flex-start;
     padding: 15px 20px;
+    /* continua em linha, com scroll se necessário */
   }
 
   nav a {
-    margin: 10px 0;
+    margin-right: 15px;
   }
 
   .banner {
-    height: 40vh; /* banner menor em celulares */
+    height: 40vh;
   }
 
   .about {
@@ -177,6 +178,6 @@ main {
   }
 
   .project-card {
-    width: 90%; /* ocupa quase toda a largura da tela */
+    width: 90%;
   }
 }
