@@ -131,6 +131,14 @@ main {
   transform: translateY(-5px);
 }
 
+.project-card img {
+  width: 100%;        /* ocupa toda a largura do card */
+  height: 200px;      /* altura fixa para uniformidade */
+  object-fit: cover;  /* mantém proporção e corta o excesso se necessário */
+  border-radius: 8px;
+  display: block;
+}
+
 .project-card h3 {
   margin-top: 15px;
   margin-bottom: 10px;
@@ -179,5 +187,9 @@ main {
 
   .project-card {
     width: 90%;
+  }
+
+  .project-card img {
+    height: 180px; /* ajuste para telas menores */
   }
 }

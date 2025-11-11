@@ -3,7 +3,7 @@ const projects = [
     id: 1,
     title: 'Aluguel Manager Web',
     description: 'Sistema de gerenciamento de aluguel de imóveis.',
-    image: '/videos/aluguel-manager.gif', // coloque o GIF na pasta public/videos
+    image: '/images/aluguel-manager.png', // coloque o GIF na pasta public/videos
     link: 'https://github.com/natanaelassis24/aluguel-manager-web'
   },
   {
@@ -12,7 +12,14 @@ const projects = [
     description: 'Projeto PetStyle - sistema relacionado a cuidados e serviços para pets.',
     image: '/videos/petstyle.gif', // coloque o GIF do PetStyle na pasta public/videos
     link: 'https://github.com/natanaelassis24/FullStack-studies/tree/main/Frontend/activity/activity_0.11'
-  }
+  },
+  {
+    id: 3,
+    title: 'Portfólio Pessoal',
+    description: 'Meu portfólio desenvolvido com Next.js e React para apresentar meus projetos.',
+    image: '/images/p.png', // coloque o GIF ou imagem na pasta public/videos
+    link: 'https://github.com/natanaelassis24/FullStack-studies/tree/main/Frontend/activity/activity_0.22/microfront-practice',
+  },
 ];
 
 export default function Projects() {
