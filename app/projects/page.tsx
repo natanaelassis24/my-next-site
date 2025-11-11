@@ -15,8 +15,8 @@ const projects = [
   },
   {
     id: 3,
-    title: 'Portfólio Pessoal',
-    description: 'Meu portfólio desenvolvido com Next.js e React para apresentar meus projetos.',
+    title: 'Micro‑Front Mastery',
+    description: 'Micro‑Front Practice: Construindo Frontends Escaláveis.',
     image: '/images/p.png', // coloque o GIF ou imagem na pasta public/videos
     link: 'https://github.com/natanaelassis24/FullStack-studies/tree/main/Frontend/activity/activity_0.22/microfront-practice',
   },
